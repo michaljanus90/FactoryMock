@@ -18,6 +18,7 @@ public:
         factoryMock(std::make_shared<FactoryMock>()),
         itemMock(std::make_shared<ItemMock>())
     {
+        expectCall();
         sut = std::make_unique<Usage>('m', factoryMock);
     }
 

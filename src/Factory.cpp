@@ -10,9 +10,9 @@ Factory::ItemPtr Factory::create(char a)
     switch (a)
     {
         case 'm':
-            return std::make_unique<MinItem>();
+            return std::make_shared<MinItem>();
         case 'M':
-            return std::make_unique<MaxItem>();
+            return std::make_shared<MaxItem>();
         default:
             throw std::runtime_error("Not valid sign");
     }

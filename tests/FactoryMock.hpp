@@ -6,5 +6,5 @@
 class FactoryMock : public src::IFactory
 {
 public:
-    MOCK_METHOD1(create, std::unique_ptr<src::IItem>(char a));
+    MOCK_METHOD1(create, std::shared_ptr<src::IItem>(char a));
 };
