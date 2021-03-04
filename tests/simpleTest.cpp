@@ -25,7 +25,7 @@ public:
     void expectCall()
     {
         EXPECT_CALL(*factoryMock, create(testing::_))
-            .WillOnce(testing::Return(testing::ReturnPointee(itemMock)));
+            .WillOnce(testing::Return(itemMock));
         
     }
 protected:
